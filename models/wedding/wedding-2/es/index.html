@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Boda por @lucsantosdev</title>
+    <meta name="description" content="Celebra el fin de semana de boda de John y Jane. Explora la programación, el lugar, detalles de viaje y RSVP.">
+    <link rel="stylesheet" type="text/css" href="../theme.css">
+    <link rel="stylesheet" type="text/css" href="../icons/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="top-nav">
+        <div class="brand">J <span>&</span> J</div>
+        <ul class="nav-links">
+          <li><a data-scroll href="#story">Nuestra Historia</a></li>
+          <li><a data-scroll href="#details">Detalles</a></li>
+          <li><a data-scroll href="#travel">Viaje</a></li>
+          <li><a data-scroll href="#rsvp">RSVP</a></li>
+        </ul>
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <a class="lang-link" href="../index.html" lang="en">EN</a>
+          <a class="lang-link is-active" href="./index.html" lang="es" aria-current="page">ES</a>
+          <a class="lang-link" href="../pt/index.html" lang="pt-BR">PT</a>
+        </div>
+      </nav>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">Fin de Semana de Boda</p>
+        <h1 class="heading">John & Jane</h1>
+        <p class="heading-subtext">Sábado, 12 de Diciembre de 2026 | Grand Venue Place, California</p>
+        <div class="hero-actions">
+          <a data-scroll class="button button-primary" href="#rsvp">Reserve su lugar</a>
+          <a data-scroll class="button button-secondary" href="#details">Ver Cronograma</a>
+        </div>
+      </div>
+
+      <div class="countdown reveal" aria-live="polite">
+        <div class="countdown-item">
+          <span id="days">00</span>
+          <small>Días</small>
+        </div>
+        <div class="countdown-item">
+          <span id="hours">00</span>
+          <small>Horas</small>
+        </div>
+        <div class="countdown-item">
+          <span id="minutes">00</span>
+          <small>Minutos</small>
+        </div>
+        <div class="countdown-item">
+          <span id="seconds">00</span>
+          <small>Segundos</small>
+        </div>
+      </div>
+    </header>
+
+    <a data-scroll class="fixed-button" href="#rsvp" id="rsvpButton">RSVP</a>
+
+    <main>
+      <section class="section intro reveal" id="story">
+        <h2 class="sub-heading">Nuestra Historia</h2>
+        <p>
+          Nos conocimos en un café concurrido de la ciudad, nos conectamos a través de listas de reproducción nocturnas y transformamos noches comunes en aventuras inolvidables.
+          Este día marca el comienzo de nuestro para siempre, y estamos honrados de celebrarlo con las personas que han moldeado nuestro viaje.
+        </p>
+      </section>
+
+      <section class="section" id="details">
+        <h2 class="sub-heading reveal">Cronograma de la Boda</h2>
+        <div class="timeline">
+          <article class="details reveal">
+            <i class="fas fa-church"></i>
+            <h3 class="details-heading">Ceremonia</h3>
+            <p>16:00 en la Capilla Rosa</p>
+            <p>Las puertas se abren a las 15:30. Llegue temprano para acomodarse.</p>
+          </article>
+
+          <article class="details reveal">
+            <i class="fas fa-glass-cheers"></i>
+            <h3 class="details-heading">Hora del Cóctel</h3>
+            <p>17:30 en la Terraza del Jardín</p>
+            <p>Bebidas exclusivas, música en vivo y vistas del atardecer.</p>
+          </article>
+
+          <article class="details reveal">
+            <i class="fas fa-utensils"></i>
+            <h3 class="details-heading">Cena & Brindis</h3>
+            <p>19:00 en el Salón Principal</p>
+            <p>Una cena de tres platos seguida de discursos emocionantes.</p>
+          </article>
+
+          <article class="details reveal">
+            <i class="fas fa-music"></i>
+            <h3 class="details-heading">Baile</h3>
+            <p>20:30 hasta la medianoche</p>
+            <p>Trae tus mejores pasos. La pista de baile te está llamando.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section venue-grid" id="travel">
+        <div class="details reveal venue">
+          <h2 class="sub-heading">Local</h2>
+          <p>
+            <strong>Grand Venue Place</strong><br>
+            1256 Magnolia Avenue, Monterey, CA
+          </p>
+          <p>
+            <a rel="noopener" href="#" title="Abrir mapa">Abrir Mapa</a>
+          </p>
+          <img class="resort-image" src="./img/resort.jpeg" alt="Grand Venue Place">
+        </div>
+
+        <div class="details reveal stay">
+          <h2 class="sub-heading">Viaje & Alojamiento</h2>
+          <ul class="info-list">
+            <li>Aeropuerto más cercano: Aeropuerto Regional de Monterey (MRY), a 20 minutos.</li>
+            <li>Servicio de transporte entre los hoteles asociados y el lugar a partir de las 14:30.</li>
+            <li>Bloque de habitaciones disponible en el Hotel Seabreeze hasta el 1 de noviembre de 2026.</li>
+            <li>Traje semi-formal: tonos neutros suaves y elegancia clásica son recomendados.</li>
+          </ul>
+          <a class="button button-secondary" href="#" rel="noopener">Agregar al Calendario</a>
+        </div>
+      </section>
+
+      <section class="section gift-note reveal">
+        <h2 class="sub-heading">Una Nota Sobre Regalos</h2>
+        <p>Su amor, risas y presencia son los mayores regalos que podríamos pedir. Ningún regalo en caja es necesario.</p>
+      </section>
+
+      <section class="section rsvp-card reveal" id="rsvp">
+        <h2 class="sub-heading">RSVP</h2>
+        <p>Por favor, responda hasta el 25 de octubre de 2026. Mal podemos esperar para celebrar con usted.</p>
+        <a class="button button-primary" href="#" rel="noopener">Abrir Formulario RSVP</a>
+        <p class="rsvp-help">Reemplace este enlace con la URL de su formulario RSVP o incorpore su formulario a continuación.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Con amor, John & Jane</p>
+      <div class="footer-social" aria-label="Enlaces sociales">
+        <a href="https://www.linkedin.com/in/lucsantosdev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/lucsantosdev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:lucsantosdev@gmail.com" aria-label="Correo electrónico">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="https://ko-fi.com/lucsantosdev" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi">
+          <i class="fas fa-mug-hot" aria-hidden="true"></i>
+        </a>
+      </div>
+      <a data-scroll href="#top" class="to-top">Volver al inicio</a>
+      <p>Desarrollado por @lucsantosdev</p>
+    </footer>
+
+    <script src="../js/smooth-scroll.polyfills.min.js"></script>
+    <script defer>
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 700,
+        speedAsDuration: true,
+        offset: 0
+      });
+
+      var rsvpButton = document.getElementById('rsvpButton');
+      var rsvpSection = document.getElementById('rsvp');
+      var observer;
+
+      rsvpButton.addEventListener('click', hideButton, false);
+
+      function hideButton() {
+        rsvpButton.classList.add('hidden');
+      }
+
+      function showButton() {
+        rsvpButton.classList.remove('hidden');
+      }
+
+      if (window.IntersectionObserver) {
+        observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              hideButton();
+            } else {
+              showButton();
+            }
+          });
+        }, {
+          threshold: 0.2
+        });
+
+        observer.observe(rsvpSection);
+      }
+
+      function startCountdown() {
+        var weddingDate = new Date('December 12, 2026 16:00:00').getTime();
+
+        function updateCountdown() {
+          var now = new Date().getTime();
+          var distance = weddingDate - now;
+
+          if (distance <= 0) {
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+            return;
+          }
+
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById('days').textContent = String(days).padStart(2, '0');
+          document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      }
+
+      function initReveal() {
+        var revealItems = document.querySelectorAll('.reveal');
+
+        if (!window.IntersectionObserver) {
+          revealItems.forEach(function(item) {
+            item.classList.add('visible');
+          });
+          return;
+        }
+
+        var revealObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.15
+        });
+
+        revealItems.forEach(function(item) {
+          revealObserver.observe(item);
+        });
+      }
+
+      startCountdown();
+      initReveal();
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY < 120) {
+          showButton();
+        }
+      });
+    </script>
+  </body>
+</html>
