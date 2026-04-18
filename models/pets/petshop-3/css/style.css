@@ -1,0 +1,511 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #263138;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: #FA9A6C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 80px;
+}
+
+header nav a {
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 32px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+}
+
+header nav a:hover {
+    color: #CE5647;
+}
+
+.language-switcher {
+    position: relative;
+}
+
+.language-switcher summary {
+    list-style: none;
+    background-color: #FFFFFF;
+    border: 1px solid #CE5647;
+    border-radius: 8px;
+    color: #CE5647;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    min-width: 58px;
+    padding: 10px 14px;
+    text-align: center;
+}
+
+.language-switcher summary img {
+    width: 22px;
+    height: auto;
+    border-radius: 2px;
+}
+
+.language-switcher summary::-webkit-details-marker {
+    display: none;
+}
+
+.language-switcher[open] summary {
+    background-color: #fff2eb;
+}
+
+.language-options {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    background-color: #FFFFFF;
+    border: 1px solid #f1c1a8;
+    border-radius: 8px;
+    box-shadow: 0 8px 18px rgba(38, 49, 56, 0.12);
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.language-options a {
+    color: #263138;
+    padding: 10px 14px;
+    text-decoration: none;
+}
+
+.language-options a:hover {
+    background-color: #fff2eb;
+}
+
+.language-options a[aria-current="page"] {
+    color: #CE5647;
+    font-weight: 700;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 80px 128px;
+    position: relative;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.paragraph {
+    line-height: 150%;
+    margin-bottom: 32px;
+}
+
+.button {
+    background-color: #FF725E;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #CE5647;
+}
+
+
+.transparent-button {
+    background-color: transparent;
+    color: #FF725E;
+    padding: 16px 32px;
+    text-underline-offset: 4px;
+    cursor: pointer;
+}
+
+.transparent-button:hover {
+    color: #e05d4b;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+#clinic,
+#faq {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+#faq > img {
+    flex-shrink: 0;
+}
+
+#faq > div {
+    flex: 1;
+}
+
+#clinic li {
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+
+#pharmacy {
+    padding: 64px 80px;
+    text-align: center;
+}
+
+#pharmacy img {
+    margin: 64px auto;
+}
+
+#pharmacy .paragraph {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.faq {
+    position: relative;
+}
+
+.faq h3 {
+    border: 2px solid #FF725E;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 24px;
+}
+
+.faq h3:hover {
+    color: #FF725E;
+}
+
+.faq img {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+}
+
+
+.faq .paragraph {
+    border-right: 1px solid #FF725E;
+    border-bottom: 1px solid #FF725E;
+    border-left: 1px solid #FF725E;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0 24px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.faq.active .paragraph {
+    padding: 24px;
+    height: fit-content;
+    opacity: 1;
+}
+
+footer {
+    background-color: rgba(255, 152, 108, 0.25);
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 64px 80px;
+}
+
+footer img,
+footer .title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer a {
+    color: #263138;
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color:#FF725E;
+}
+
+footer p {
+    margin-bottom: 16px;
+    max-width: 350px;
+}
+
+footer p a {
+    color: #263138;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #FA9A6C;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(38, 49, 56, 0.08);
+    display: inline-flex;
+    height: 42px;
+    justify-content: center;
+    margin-bottom: 0;
+    transition: transform .2s, background-color .2s;
+    width: 42px;
+}
+
+.social-links a:hover {
+    background-color: #FF725E;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.social-links svg {
+    fill: currentColor;
+    height: 18px;
+    width: 18px;
+}
+
+#copyright {
+    background-color: #263138;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 24px;
+    text-align: center;
+}
+
+#copyright a {
+    color: #FA9A6C;
+}
+
+#copyright a:hover {
+    color: #CE5647;
+}
+
+#copyright p {
+    margin: 0;
+}
+
+.copyright-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copyright-social a {
+    align-items: center;
+    border: 1px solid rgba(250, 154, 108, 0.28);
+    border-radius: 999px;
+    color: #FA9A6C;
+    display: inline-flex;
+    height: 30px;
+    justify-content: center;
+    margin-bottom: 0;
+    opacity: 0.85;
+    transition: opacity .2s, transform .2s, border-color .2s;
+    width: 30px;
+}
+
+.copyright-social a:hover {
+    border-color: #FA9A6C;
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.copyright-social svg {
+    fill: currentColor;
+    height: 14px;
+    width: 14px;
+}
+
+@media (max-width: 1200px) {
+    header,
+    #home,
+    #clinic,
+    #faq,
+    #pharmacy,
+    footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    header nav a {
+        padding: 20px;
+    }
+
+    #clinic,
+    #faq {
+        gap: 40px;
+    }
+
+    footer {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    #navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px;
+        width: 100%;
+    }
+
+    header nav a {
+        padding: 12px 16px;
+    }
+
+    .language-switcher {
+        margin-bottom: 8px;
+    }
+
+    #home,
+    #clinic,
+    #faq {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #home {
+        padding-bottom: 96px;
+    }
+
+    #clinic li {
+        margin-left: 22px;
+        text-align: left;
+    }
+
+    #faq > div,
+    #clinic > div,
+    #home > div {
+        width: 100%;
+    }
+
+    #pharmacy img {
+        margin: 32px auto;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    footer > div {
+        flex: 1 1 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    header,
+    #home,
+    #clinic,
+    #faq,
+    #pharmacy,
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1,
+    h2 {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .button,
+    .transparent-button {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    .faq h3 {
+        padding: 20px;
+        padding-right: 52px;
+        text-align: left;
+    }
+
+    .faq img {
+        top: 28px;
+        right: 18px;
+    }
+
+    .faq.active .paragraph {
+        text-align: left;
+    }
+
+    footer {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    #copyright {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px;
+    }
+}
+
+@media (max-width: 520px) {
+    header nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    h1,
+    h2 {
+        font-size: 24px;
+    }
+
+    .paragraph {
+        font-size: 15px;
+    }
+
+    .social-links a {
+        height: 38px;
+        width: 38px;
+    }
+}
