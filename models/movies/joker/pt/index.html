@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker | Landing Page UI Design por @lucsantosdev</title>
+    <link rel="icon" type="image/jpeg" href="../img/favicon.jpg" />
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../img/logo.png"></a>
+        <div class="lang-switch" aria-label="Seletor de idioma">
+            <a class="lang-link" href="../index.html">EN</a>
+            <a class="lang-link" href="../es/index.html">ES</a>
+            <a class="lang-link active" href="index.html" aria-current="page">PT</a>
+        </div>
+        <div class="toggle"><img src="../img/toggle.png"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Coloque um <span>Sorriso</span> nessa cara</h2>
+            <p>Em Gotham City, Arthur Fleck é um comediante fracassado que luta contra uma doença mental e a crueldade da sociedade. Ignorado e humilhado por todos, ele mergulha em uma espiral de violência — e se transforma no lendário Coringa. Um estudo sombrio sobre loucura, solidão e o caos que a indiferença das pessoas pode criar.</p>
+            <a href="#" class="play" onclick="toggle();"><img src="../img/play.png">Assista o Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="../img/facebook.png"></a></li>
+                <li><a href="#"><img src="../img/twitter.png"></a></li>
+                <li><a href="#"><img src="../img/instagram.png"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trailer">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ntSvI2qaRxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="../img/close.png" class="close" onclick="toggle();">
+    </div>
+    <footer class="site-footer">
+        <div class="footer-social" aria-label="Social links">
+            <a class="footer-icon" href="https://www.linkedin.com/in/lucsantosdev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.5 8h4V23h-4V8zm7 0h3.8v2h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V23h-4v-7.1c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23h-4V8z"/></svg>
+            </a>
+            <a class="footer-icon" href="https://github.com/lucsantosdev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.35-3.88-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.53-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.95 10.95 0 0 1 5.74 0c2.19-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.12 3.06.73.81 1.18 1.85 1.18 3.11 0 4.43-2.7 5.4-5.28 5.69.41.35.77 1.05.77 2.11v3.13c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+            <a class="footer-icon" href="mailto:lucsantosdev@gmail.com" aria-label="Email" title="Email">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm10 7.6L22 6H2l10 5.6zM2 18h20V8.3l-9.5 5.3a1 1 0 0 1-1 0L2 8.3V18z"/></svg>
+            </a>
+            <a class="footer-icon" href="https://ko-fi.com/lucsantosdev" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi" title="Ko-fi">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h13.5a4.5 4.5 0 0 1 0 9H15a7 7 0 0 1-13 0V8a2 2 0 0 1 2-2zm13 7h.5a2.5 2.5 0 0 0 0-5H15v5zm-6.3 6.9c3.5-2.7 5.3-5 5.3-7.2A3.2 3.2 0 0 0 10.8 9c-1.1 0-2 .5-2.8 1.4A3.7 3.7 0 0 0 5.2 9 3.2 3.2 0 0 0 2 12.7c0 2.2 1.8 4.5 5.3 7.2a1.2 1.2 0 0 0 1.4 0z"/></svg>
+            </a>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> Fan-made por <a href="https://www.linkedin.com/in/lucsantosdev/" target="_blank" rel="noopener noreferrer">@lucsantosdev</a></p>
+    </footer>
+
+    <script type="text/javascript">
+        function toggle() {
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('.trailer iframe');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        };
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
