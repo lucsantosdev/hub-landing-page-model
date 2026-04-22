@@ -1,0 +1,27 @@
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver(
+	(entries, observer) => {
+		entries.forEach((entry) => {
+			if (!entry.isIntersecting) {
+				return;
+			}
+
+			entry.target.classList.add('visible');
+			observer.unobserve(entry.target);
+		});
+	},
+	{
+		threshold: 0.15,
+	}
+);
+
+revealElements.forEach((element) => {
+	revealObserver.observe(element);
+});
+
+const yearElement = document.getElementById('year');
+
+if (yearElement) {
+	yearElement.textContent = String(new Date().getFullYear());
+}
