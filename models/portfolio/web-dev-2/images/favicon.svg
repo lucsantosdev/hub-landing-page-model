@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="7" fill="#1a1a1a"/>
+  <!-- Subtle inner border -->
+  <rect x="1" y="1" width="30" height="30" rx="6.5" fill="none" stroke="#00ce79" stroke-width="1" stroke-opacity="0.35"/>
+  <!-- < symbol -->
+  <text x="5" y="22" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="15" fill="#00ce79">&lt;</text>
+  <!-- / symbol -->
+  <text x="13" y="22" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="15" fill="#ffffff">/</text>
+  <!-- > symbol -->
+  <text x="20" y="22" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="15" fill="#00ce79">&gt;</text>
+</svg>
