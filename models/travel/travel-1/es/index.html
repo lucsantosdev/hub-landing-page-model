@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agencia de Viajes por @lucsantosdev</title>
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+  <header id="inicio">
+    <div class="container">
+      <div class="nav_bar">
+        <div class="logo">
+          <i class="fa-solid fa-route"></i>
+          <h4>VIP TOUR</h4>
+        </div>
+
+          <div class="menu_list">
+            <a href="#inicio">Inicio</a>
+            <a href="#destinos">Destinos</a>
+            <a href="#servicos">Servicios</a>
+            <a href="#pacotes">Paquetes</a>
+            <a href="#contato">Contacto</a>
+
+            <div class="lang_switch" aria-label="Selector de idioma">
+              <a href="../index.html">EN</a>
+              <a href="../pt/index.html">PT</a>
+              <a class="active" href="index.html" aria-current="page">ES</a>
+            </div>
+
+            <button class="lg_btn">Iniciar sesión</button>
+          </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="home_section">
+    <div class="overlay">
+      <div class="container">
+        <div class="home">
+          <p class="hero_tag">Experiencias Premium en cada ruta</p>
+          <h1><span>conozca</span> personas <br>descubra <span>lugares</span> <br><span>aproveche</span> todo</h1>
+          <p class="hero_text">Desde la playa hasta la cima de la montaña, creamos viajes personalizados para quienes quieren vivir más que tomar fotos.</p>
+          <div class="home_buttons">
+            <button class="btn1">Explorar el Mundo</button>
+            <button><i class="fas fa-play"></i>Video</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="title">
+        <h1>Visite los Mejores Lugares del <span>Mundo</span></h1>
+        <span class="slogan">Aproveche su viaje.</span>
+      </div>
+      <div class="services_boxes">
+        <div class="box">
+          <i class="fa-solid fa-hotel"></i>
+          <h4>Alojamiento Seleccionado</h4>
+          <p>Hoteles y resorts elegidos en base a comodidad, ubicación y evaluación real de los viajeros.</p>
+        </div>
+
+        <div class="box br">
+          <i class="fa-solid fa-plane"></i>
+          <h4>Pasajes Inteligentes</h4>
+          <p>Rutas optimizadas con la mejor relación costo-beneficio para llegar más rápido y pagar menos.</p>
+        </div>
+
+        <div class="box">
+          <i class="fa-solid fa-mountain-sun"></i>
+          <h4>Itinerario a Medida</h4>
+          <p>Planificación completa con atracciones, gastronomía local, paseos y experiencias exclusivas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="destinations" id="destinos">
+    <div class="container">
+      <div class="title">
+        <h1>Destinos en <span>Alta</span></h1>
+        <span class="slogan">Elija el próximo escenario de su historia.</span>
+      </div>
+      <div class="destination_grid">
+        <article class="destination_card">
+          <img src="https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Vista de Santorini en Grecia" loading="lazy" />
+          <div class="card_content">
+            <h3>Santorini, Grecia</h3>
+            <p>7 días entre el atardecer en el mar Egeo, villas blancas y experiencias gastronómicas locales.</p>
+            <a href="#pacotes">Ver paquete <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="destination_card">
+          <img src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Playa tropical en Bali" loading="lazy" />
+          <div class="card_content">
+            <h3>Bali, Indonesia</h3>
+            <p>Templos, playas y naturaleza exuberante en un itinerario enfocado en bienestar y aventura.</p>
+            <a href="#pacotes">Ver paquete <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="destination_card">
+          <img src="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Calles de París con la torre al fondo" loading="lazy" />
+          <div class="card_content">
+            <h3>París, Francia</h3>
+            <p>Cultura, arte y romance con paseos clásicos y experiencias fuera del circuito tradicional.</p>
+            <a href="#pacotes">Ver paquete <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="packages" id="pacotes">
+    <div class="container">
+      <div class="title">
+        <h1>Paquetes para cada <span>estilo</span></h1>
+        <span class="slogan">Flexibilidad total para viajar a su manera.</span>
+      </div>
+      <div class="package_table">
+        <div class="package_col">
+          <h3>Esencial</h3>
+          <h2>R$ 2.490</h2>
+          <p>Perfecto para escapadas cortas</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i>Pasaje de ida y vuelta</li>
+            <li><i class="fa-solid fa-check"></i>4 noches de alojamiento</li>
+            <li><i class="fa-solid fa-check"></i>Traslado al aeropuerto</li>
+          </ul>
+          <button>Elegir plan</button>
+        </div>
+
+        <div class="package_col featured">
+          <span class="badge">Más elegido</span>
+          <h3>Premium</h3>
+          <h2>R$ 4.890</h2>
+          <p>Ideal para quienes buscan comodidad completa</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i>Pasaje con franquicia extra</li>
+            <li><i class="fa-solid fa-check"></i>7 noches en hotel 4 estrellas</li>
+            <li><i class="fa-solid fa-check"></i>2 paseos guiados</li>
+            <li><i class="fa-solid fa-check"></i>Seguro de viaje</li>
+          </ul>
+          <button>Elegir plan</button>
+        </div>
+
+        <div class="package_col">
+          <h3>Lujo</h3>
+          <h2>R$ 8.990</h2>
+          <p>Experiencia exclusiva y personalizada</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i>Clase ejecutiva</li>
+            <li><i class="fa-solid fa-check"></i>10 noches en resort 5 estrellas</li>
+            <li><i class="fa-solid fa-check"></i>Conserje 24h</li>
+            <li><i class="fa-solid fa-check"></i>Experiencia gastronómica premium</li>
+          </ul>
+          <button>Elegir plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="title">
+        <h1>Quienes viajan con nosotros, <span>vuelven</span></h1>
+      </div>
+      <div class="testimonial_wrapper">
+        <div class="testimonial">
+          <p>"El viaje fue impecable de principio a fin. Atención ágil, itinerario increíble y cero preocupaciones."</p>
+          <h4>Marina Costa</h4>
+          <span>Luna de miel en Santorini</span>
+        </div>
+        <div class="testimonial">
+          <p>"Contraté el paquete Premium y superó las expectativas. Valió cada centavo por la organización y el soporte."</p>
+          <h4>Eduardo Lima</h4>
+          <span>Vacaciones en Bali</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter" id="contato">
+    <div class="container">
+      <div class="newsletter_content">
+        <h2>Recibe ofertas y itinerarios exclusivos</h2>
+        <p>Suscríbete a nuestro boletín y sé el primero en enterarte de promociones relámpago.</p>
+        <form>
+          <input type="email" placeholder="Introduce tu mejor correo electrónico" aria-label="Introduce tu mejor correo electrónico" required />
+          <button type="submit">Quiero recibir</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer_grid">
+      <div>
+        <div class="logo">
+          <i class="fa-solid fa-route"></i>
+          <h4>VIP TOUR</h4>
+        </div>
+        <p>Transformando cada viaje en un recuerdo inolvidable.</p>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Blog</a>
+        <a href="#">Carreras</a>
+      </div>
+      <div>
+        <h4>Soporte</h4>
+        <a href="#">Centro de ayuda</a>
+        <a href="#">Política de cancelación</a>
+        <a href="#">Términos de uso</a>
+      </div>
+      <div>
+        <h4>Redes Sociales</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2026 VIP TOUR. Todos los derechos reservados.</p>
+    <p class="copyright developer_credit">Desarrollado por <a href="https://www.linkedin.com/in/lucsantosdev" target="_blank" rel="noopener noreferrer">@lucsantosdev</a></p>
+    <div class="socials developer_socials">
+          <a href="https://www.linkedin.com/in/lucsantosdev" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/lucsantosdev" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:lucsantosdev@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://ko-fi.com/lucsantosdev" aria-label="Ko-fi"><i class="fa-solid fa-mug-hot"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
