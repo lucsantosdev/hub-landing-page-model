@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Burger House favicon">
+  <defs>
+    <linearGradient id="bun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffcc47"/>
+      <stop offset="1" stop-color="#ff7a2f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#17120f"/>
+  <ellipse cx="32" cy="22" rx="19" ry="10" fill="url(#bun)"/>
+  <rect x="14" y="28" width="36" height="4" rx="2" fill="#74c45f"/>
+  <rect x="13" y="33" width="38" height="7" rx="3.5" fill="#6f3f27"/>
+  <rect x="16" y="41" width="32" height="8" rx="4" fill="url(#bun)"/>
+  <circle cx="22" cy="20" r="1.2" fill="#ffe8a0"/>
+  <circle cx="30" cy="18" r="1.2" fill="#ffe8a0"/>
+  <circle cx="38" cy="20" r="1.2" fill="#ffe8a0"/>
+  <circle cx="44" cy="23" r="1.2" fill="#ffe8a0"/>
+</svg>
