@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoffeeShop por @lucsantosdev</title>
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../img/favicon.svg" sizes="any">
+    <link rel="apple-touch-icon" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tooplate-wave-cafe.css">
+</head>
+<body>
+  <div class="tm-container">
+    <div class="tm-row">
+      <!-- Site Header -->
+      <div class="tm-left">
+        <div class="tm-left-inner">
+          <div class="tm-site-header">
+            <i class="fas fa-mug-hot fa-3x tm-site-logo"></i>
+            <div class="tm-brand-lockup">
+              <h1 class="tm-site-name">Drift Roast House</h1>
+              <p class="tm-site-tagline">Mañanas tranquilas. Wi-Fi rápido. Café intenso.</p>
+            </div>
+          </div>
+          <div class="tm-lang-switcher">
+            <a href="../index.html" class="tm-lang-btn">EN</a>
+            <a href="../pt/index.html" class="tm-lang-btn">PT</a>
+            <a href="index.html" class="tm-lang-btn tm-lang-active" aria-current="page">ES</a>
+          </div>
+          <div class="tm-black-bg tm-side-intro">
+            <p class="tm-side-intro-top">Café premiado del barrio - Est. 2018</p>
+            <h2>Bebidas artesanales, pasteles frescos y un espacio acogedor para relajarse.</h2>
+            <p>Del espresso al amanecer al cold brew en la hora dorada, cada taza se prepara con precisión y se sirve con personalidad.</p>
+            <a href="#contact" class="tm-intro-cta tm-page-link-cta">Reserve una Mesa</a>
+          </div>
+          <nav class="tm-site-nav">
+            <ul class="tm-site-nav-ul">
+              <li class="tm-page-nav-item">
+                <a href="#drink" class="tm-page-link active">
+                  <i class="fas fa-mug-hot tm-page-link-icon"></i>
+                  <span>Menú</span>
+                </a>
+              </li>
+              <li class="tm-page-nav-item">
+                <a href="#about" class="tm-page-link">
+                  <i class="fas fa-users tm-page-link-icon"></i>
+                  <span>Nuestra Historia</span>
+                </a>
+              </li>
+              <li class="tm-page-nav-item">
+                <a href="#special" class="tm-page-link">
+                  <i class="fas fa-glass-martini tm-page-link-icon"></i>
+                  <span>Selecciones Exclusivas</span>
+                </a>
+              </li>
+              <li class="tm-page-nav-item">
+                <a href="#contact" class="tm-page-link">
+                  <i class="fas fa-comments tm-page-link-icon"></i>
+                  <span>Visítenos</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>        
+      </div>
+      <div class="tm-right">
+        <main class="tm-main">
+          <div id="drink" class="tm-page-content">
+            <!-- Drink Menu Page -->
+            <nav class="tm-black-bg tm-drinks-nav">
+              <ul>
+                <li>
+                  <a href="#" class="tm-tab-link active" data-id="cold">Cold Brew Bar</a>
+                </li>
+                <li>
+                  <a href="#" class="tm-tab-link" data-id="hot">Espresso &amp; Caliente</a>
+                </li>
+                <li>
+                  <a href="#" class="tm-tab-link" data-id="juice">House Coolers</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div id="cold" class="tm-tab-content">
+              <div class="tm-list">
+                <div class="tm-list-item">          
+                  <img src="../img/iced-americano.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Citrus Iced Americano<span class="tm-list-item-price">$4.80</span></h3>
+                    <p class="tm-list-item-description">Doble espresso, ralladura de naranja y agua filtrada para un final crujiente y brillante.</p>
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="../img/iced-cappuccino.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Cloud Iced Cappuccino<span class="tm-list-item-price">$5.30</span></h3>
+                    <p class="tm-list-item-description">Espuma aterciopelada sobre espresso helado con un toque de vainilla y leche de avena.</p>
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="../img/iced-espresso.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Shaken Honey Espresso<span class="tm-list-item-price">$5.90</span></h3>
+                    <p class="tm-list-item-description">Espresso agitado con miel silvestre y hielo hasta obtener una textura suave y aromática.</p>
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="../img/iced-latte.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Salted Caramel Latte<span class="tm-list-item-price">$6.20</span></h3>
+                    <p class="tm-list-item-description">Nuestro exclusivo latte helado, con capas de caramelo y una sutil crema de sal marina.</p>
+                  </div>
+                </div> 
+                                       
+              </div>
+            </div> 
+
+            <div id="hot" class="tm-tab-content">
+              <div class="tm-list">
+              
+                <div class="tm-list-item">          
+                  <img src="../img/hot-americano.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Americano Clásico<span class="tm-list-item-price">$3.90</span></h3>
+                    <p class="tm-list-item-description">Tostado de la casa equilibrado con notas de chocolate y un final limpio y duradero.</p>              
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="../img/hot-cappuccino.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Cappuccino Seco<span class="tm-list-item-price">$4.40</span></h3>
+                    <p class="tm-list-item-description">Espresso rico y microespuma espesa para un cuerpo robusto y textura sedosa.</p>                    
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="../img/hot-espresso.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Espresso Single Origin<span class="tm-list-item-price">$3.50</span></h3>
+                    <p class="tm-list-item-description">Selección de granos rotativa semanalmente, extraída en el punto ideal.</p>              
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="../img/hot-latte.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Maple Cinnamon Latte<span class="tm-list-item-price">$5.20</span></h3>
+                    <p class="tm-list-item-description">Leche vaporizada, jarabe de arce y canela en polvo para un perfil estacional acogedor.</p>              
+                  </div>
+                </div>
+                         
+              </div>
+            </div>
+
+            <div id="juice" class="tm-tab-content">
+              <div class="tm-list">
+                <div class="tm-list-item">          
+                  <img src="../img/smoothie-1.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Berry Basil Fizz<span class="tm-list-item-price">$5.10</span></h3>
+                    <p class="tm-list-item-description">Puré de fresa, hojas de albahaca y agua con gas sobre hielo triturado.</p>              
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="../img/smoothie-2.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Ruby Tonic Brew<span class="tm-list-item-price">$5.80</span></h3>
+                    <p class="tm-list-item-description">Cold brew, tónica y un toque de granada con un toque cítrico brillante.</p>                    
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="../img/smoothie-3.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Pineapple Matcha Cooler<span class="tm-list-item-price">$6.40</span></h3>
+                    <p class="tm-list-item-description">Matcha ceremonial, piña y agua de coco para un toque tropical.</p>              
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="../img/smoothie-4.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Green Citrus Refresher<span class="tm-list-item-price">$5.60</span></h3>
+                    <p class="tm-list-item-description">Espinaca, kiwi, limón y menta mezclados en un refresco limpio y vibrante.</p>              
+                  </div>
+                </div>              
+              </div>
+            </div>
+            <!-- end Drink Menu Page -->
+          </div>
+
+          <!-- About Us Page -->
+          <div id="about" class="tm-page-content">
+            <div class="tm-black-bg tm-mb-20 tm-about-box-1">              
+              <h2 class="tm-text-primary tm-about-header">The Drift Story</h2>
+              <div class="tm-list-item tm-list-item-2">                
+                <img src="../img/about-1.png" alt="Image" class="tm-list-item-img tm-list-item-img-big">
+                <div class="tm-list-item-text-2">
+                  <p>Drift Roast House comenzó como un pequeño mostrador con una máquina de espresso y una misión: hacer que el café especial sea acogedor para todos.</p>
+                  <p>Hoy, tostamos en pequeños lotes, adquirimos de manera responsable y servimos un menú que sigue las estaciones y nuestro vecindario.</p>
+                </div>                
+              </div>
+            </div>
+            <div class="tm-black-bg tm-mb-20 tm-about-box-2">              
+              <div class="tm-list-item tm-list-item-2">                
+                <div class="tm-list-item-text-2">
+                  <h2 class="tm-text-primary">Cómo Preparamos Diferente</h2>
+                  <p>Calibramos cada dosis diariamente, ajustamos la molienda según la humedad y entrenamos a cada barista para ofrecer consistencia en cada taza.</p>                  
+                </div>                
+                <img src="../img/about-2.png" alt="Image" class="tm-list-item-img tm-list-item-img-big tm-img-right">                
+              </div>
+              <p>Ya sea que estés reuniéndote con un cliente, escribiendo tu próximo capítulo o simplemente siguiendo tu ritual matutino, Drift está diseñado para sentirse como tu segunda casa creativa.</p>
+            </div>
+          </div>
+          <!-- end About Us Page -->
+
+          <!-- Special Items Page -->
+          <div id="special" class="tm-page-content">
+            <div class="tm-special-items">
+              <div class="tm-black-bg tm-special-item">
+                <img src="../img/special-01.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Sunrise Flight</h2>
+                  <p class="tm-special-item-text">Un trío de degustación: dosis de espresso, mini cortado y cold brew cítrico.</p>  
+                </div>
+              </div>
+              <div class="tm-black-bg tm-special-item">
+                <img src="../img/special-02.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">House Croffle</h2>
+                  <p class="tm-special-item-text">Waffle de croissant con mantequilla, cubierto con caramelo de espresso y sal marina.</p>  
+                </div>
+              </div>
+              <div class="tm-black-bg tm-special-item">
+                <img src="../img/special-03.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Nitro On Tap</h2>
+                  <p class="tm-special-item-text">Cold brew nitro cremoso y naturalmente dulce, servido directamente del barril.</p>  
+                </div>
+              </div>
+              <div class="tm-black-bg tm-special-item">
+                <img src="../img/special-04.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Roaster's Reserve</h2>
+                  <p class="tm-special-item-text">Granos de edición limitada preparados como V60, con notas de degustación en cada mesa.</p>  
+                </div>
+              </div>      
+              <div class="tm-black-bg tm-special-item">
+                <img src="../img/special-05.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Matcha Affogato</h2>
+                  <p class="tm-special-item-text">Gelato de vainilla, matcha ceremonial y crocante de almendras tostadas.</p>  
+                </div>
+              </div>
+              <div class="tm-black-bg tm-special-item">
+                <img src="../img/special-06.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Golden Hour Set</h2>
+                  <p class="tm-special-item-text">Cualquier bebida exclusiva acompañada del dulce del día, de 16h a 18h.</p>  
+                </div>
+              </div>                      
+            </div>            
+          </div>
+          <!-- end Special Items Page -->
+
+          <!-- Contact Page -->
+          <div id="contact" class="tm-page-content">
+            <div class="tm-black-bg tm-contact-text-container">
+              <h2 class="tm-text-primary">Visite Drift Roast House</h2>
+              <p>Estamos abiertos diariamente de 7:00 a 21:00. Ven a almorzar, reserva una mesa tranquila o pregunta sobre noches de degustación privadas para equipos y amigos.</p>
+            </div>
+            <div class="tm-black-bg tm-contact-form-container tm-align-right">
+              <form action="" method="POST" id="contact-form">
+                <div class="tm-form-group">
+                  <input type="text" name="name" class="tm-form-control" placeholder="Nombre Completo" required="" />
+                </div>
+                <div class="tm-form-group">
+                  <input type="email" name="email" class="tm-form-control" placeholder="Dirección de Email" required="" />
+                </div>        
+                <div class="tm-form-group tm-mb-30">
+                  <textarea rows="6" name="message" class="tm-form-control" placeholder="Informe su horario preferido y el tamaño del grupo" required=""></textarea>
+                </div>        
+                <div>
+                  <button type="submit" class="tm-btn-primary tm-align-right">
+                    Enviar Solicitud
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- end Contact Page -->
+        </main>
+        <footer class="tm-site-footer">
+          <div class="tm-black-bg tm-footer-inner">
+            <p class="tm-footer-text">Copyright 2026 | Desarrollado por @lucsantosdev</p>
+            <div class="tm-footer-social">
+              <a href="https://linkedin.com/in/lucsantosdev" class="tm-social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/lucsantosdev" class="tm-social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:hello@lucsantosdev.com" class="tm-social-link" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://ko-fi.com/lucsantosdev" class="tm-social-link tm-social-kofi" target="_blank" rel="noopener" aria-label="Ko-fi">
+                <i class="fas fa-mug-hot"></i>
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+    
+  <!-- Background video -->
+  <div class="tm-video-wrapper">
+      <i id="tm-video-control-button" class="fas fa-pause"></i>
+      <video autoplay muted loop id="tm-video">
+          <source src="../video/wave-cafe-video-bg.mp4" type="video/mp4">
+      </video>
+  </div>
+
+  <script src="../js/jquery-3.4.1.min.js"></script>    
+  <script>
+
+    function setVideoSize() {
+      const vidWidth = 1920;
+      const vidHeight = 1080;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+      const tempVidWidth = windowHeight * vidWidth / vidHeight;
+      const tempVidHeight = windowWidth * vidHeight / vidWidth;
+      const newVidWidth = tempVidWidth > windowWidth ? tempVidWidth : windowWidth;
+      const newVidHeight = tempVidHeight > windowHeight ? tempVidHeight : windowHeight;
+      const tmVideo = $('#tm-video');
+
+      tmVideo.css('width', newVidWidth);
+      tmVideo.css('height', newVidHeight);
+    }
+
+    function openTab(evt, id) {
+      $('.tm-tab-content').hide();
+      $('#' + id).show();
+      $('.tm-tab-link').removeClass('active');
+      $(evt.currentTarget).addClass('active');
+    }    
+
+    function initPage() {
+      let pageId = location.hash;
+
+      if(pageId) {
+        highlightMenu($(`.tm-page-link[href^="${pageId}"]`)); 
+        showPage($(pageId));
+      }
+      else {
+        pageId = $('.tm-page-link.active').attr('href');
+        showPage($(pageId));
+      }
+    }
+
+    function highlightMenu(menuItem) {
+      $('.tm-page-link').removeClass('active');
+      menuItem.addClass('active');
+    }
+
+    function showPage(page) {
+      $('.tm-page-content').hide();
+      page.show();
+    }
+
+    $(document).ready(function(){
+
+      /***************** Pages *****************/
+
+      initPage();
+
+      $('.tm-page-link').click(function(event) {
+        
+        if(window.innerWidth > 991) {
+          event.preventDefault();
+        }
+
+        highlightMenu($(event.currentTarget));
+        showPage($(event.currentTarget.hash));
+      });
+
+      
+      /***************** Tabs *******************/
+
+      $('.tm-tab-link').on('click', e => {
+        e.preventDefault(); 
+        openTab(e, $(e.target).data('id'));
+      });
+
+      $('.tm-tab-link.active').click(); // Open default tab
+
+
+      /************** Video background *********/
+
+      setVideoSize();
+
+      // Set video background size based on window size
+      let timeout;
+      window.onresize = function(){
+        clearTimeout(timeout);
+        timeout = setTimeout(setVideoSize, 100);
+      };
+
+      // Play/Pause button for video background      
+      const btn = $("#tm-video-control-button");
+
+      btn.on("click", function(e) {
+        const video = document.getElementById("tm-video");
+        $(this).removeClass();
+
+        if (video.paused) {
+          video.play();
+          $(this).addClass("fas fa-pause");
+        } else {
+          video.pause();
+          $(this).addClass("fas fa-play");
+        }
+      });
+    });
+      
+  </script>
+</body>
+</html>
