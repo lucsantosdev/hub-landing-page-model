@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Landing Page Models Hub</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--bg: #f5efe4;
+				--surface: #fffaf2;
+				--surface-2: #fff5e7;
+				--text: #1f2a2a;
+				--muted: #5a6662;
+				--border: rgba(31, 42, 42, 0.14);
+				--accent: #0f766e;
+				--accent-2: #d97706;
+				--shadow: 0 18px 40px rgba(31, 42, 42, 0.12);
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				min-height: 100vh;
+				font-family: "Manrope", sans-serif;
+				color: var(--text);
+				background:
+					radial-gradient(circle at 10% 12%, rgba(217, 119, 6, 0.18), transparent 42%),
+					radial-gradient(circle at 86% 84%, rgba(15, 118, 110, 0.2), transparent 48%),
+					linear-gradient(160deg, #f8f1e8 0%, #efe6da 45%, #f5efe4 100%);
+			}
+
+			.grain {
+				position: fixed;
+				inset: 0;
+				pointer-events: none;
+				opacity: 0.24;
+				background-image: radial-gradient(rgba(31, 42, 42, 0.08) 0.6px, transparent 0.6px);
+				background-size: 4px 4px;
+				mix-blend-mode: multiply;
+			}
+
+			.layout {
+				position: relative;
+				width: min(1140px, calc(100% - 2.5rem));
+				margin: 0 auto;
+				padding: 2.5rem 0 3rem;
+			}
+
+			.hero {
+				background: linear-gradient(145deg, rgba(255, 250, 242, 0.9), rgba(255, 245, 231, 0.86));
+				border: 1px solid var(--border);
+				border-radius: 30px;
+				box-shadow: var(--shadow);
+				overflow: hidden;
+				position: relative;
+			}
+
+			.hero::before {
+				content: "";
+				position: absolute;
+				width: 290px;
+				height: 290px;
+				right: -90px;
+				top: -90px;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(15, 118, 110, 0.2), rgba(15, 118, 110, 0));
+			}
+
+			.hero::after {
+				content: "";
+				position: absolute;
+				width: 240px;
+				height: 240px;
+				left: -80px;
+				bottom: -90px;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(217, 119, 6, 0.22), rgba(217, 119, 6, 0));
+			}
+
+			.hero-inner {
+				position: relative;
+				z-index: 1;
+				padding: 3.2rem 2.4rem;
+			}
+
+			.eyebrow {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.4rem;
+				font-size: 0.72rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: var(--accent);
+				border: 1px solid rgba(15, 118, 110, 0.24);
+				padding: 0.42rem 0.72rem;
+				border-radius: 999px;
+				background: rgba(15, 118, 110, 0.08);
+			}
+
+			h1 {
+				margin: 1rem 0 0.8rem;
+				font-family: "Playfair Display", serif;
+				font-size: clamp(2rem, 4vw, 3.2rem);
+				line-height: 1.1;
+				max-width: 18ch;
+			}
+
+			.hero p {
+				margin: 0;
+				max-width: 60ch;
+				color: var(--muted);
+				line-height: 1.7;
+			}
+
+			.stats {
+				margin-top: 1.6rem;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.7rem;
+			}
+
+			.stat {
+				border: 1px solid var(--border);
+				border-radius: 12px;
+				padding: 0.62rem 0.84rem;
+				background: rgba(255, 255, 255, 0.7);
+				font-size: 0.88rem;
+			}
+
+			.stat strong {
+				color: var(--accent);
+			}
+
+			.grid {
+				margin-top: 1.7rem;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1rem;
+			}
+
+			.category {
+				border: 1px solid var(--border);
+				border-radius: 20px;
+				padding: 1rem;
+				background: linear-gradient(160deg, rgba(255, 250, 242, 0.92), rgba(255, 245, 231, 0.72));
+				transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+				box-shadow: 0 8px 24px rgba(31, 42, 42, 0.08);
+				opacity: 0;
+				transform: translateY(12px);
+				animation: card-in 0.5s ease forwards;
+			}
+
+			.category:hover {
+				transform: translateY(-6px);
+				box-shadow: 0 16px 34px rgba(31, 42, 42, 0.14);
+				border-color: rgba(15, 118, 110, 0.35);
+			}
+
+			.category h2 {
+				margin: 0;
+				font-family: "Playfair Display", serif;
+				font-size: 1.4rem;
+			}
+
+			.category small {
+				display: block;
+				margin: 0.15rem 0 0.75rem;
+				color: var(--muted);
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: grid;
+				gap: 0.54rem;
+			}
+
+			.model-link {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				text-decoration: none;
+				color: inherit;
+				border: 1px solid rgba(31, 42, 42, 0.12);
+				background: rgba(255, 255, 255, 0.7);
+				border-radius: 12px;
+				padding: 0.58rem 0.7rem;
+				font-size: 0.92rem;
+				transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+			}
+
+			.model-link span {
+				color: var(--muted);
+				font-size: 0.82rem;
+			}
+
+			.model-link:hover {
+				border-color: rgba(217, 119, 6, 0.48);
+				transform: translateX(3px);
+				background: #fff;
+			}
+
+			.footer {
+				text-align: center;
+				color: var(--muted);
+				font-size: 0.86rem;
+				padding-bottom: 0.5rem;
+			}
+
+			.footer a {
+				color: var(--accent);
+				text-decoration: none;
+				font-weight: 600;
+				border-bottom: 1.5px solid rgba(15, 118, 110, 0.35);
+				padding-bottom: 1px;
+				transition: color 0.2s ease, border-color 0.2s ease;
+			}
+
+			.footer a:hover {
+				color: var(--accent-2);
+				border-color: rgba(217, 119, 6, 0.55);
+			}
+
+			.socials {
+				display: flex;
+				justify-content: center;
+				gap: 0.75rem;
+				margin-top: 1.7rem;
+			}
+
+			.social-link {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 2.4rem;
+				height: 2.4rem;
+				border-radius: 50%;
+				border: 1px solid var(--border);
+				background: rgba(255, 255, 255, 0.7);
+				color: var(--muted);
+				transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+				text-decoration: none;
+			}
+
+			.social-link svg {
+				width: 1.1rem;
+				height: 1.1rem;
+				fill: currentColor;
+			}
+
+			.social-link:hover {
+				color: var(--accent);
+				background: rgba(15, 118, 110, 0.1);
+				border-color: rgba(15, 118, 110, 0.35);
+				transform: translateY(-3px);
+			}
+
+			.footer {
+				margin-top: 0.75rem;
+			}
+
+			.category:nth-child(1) { animation-delay: 0.02s; }
+			.category:nth-child(2) { animation-delay: 0.06s; }
+			.category:nth-child(3) { animation-delay: 0.1s; }
+			.category:nth-child(4) { animation-delay: 0.14s; }
+			.category:nth-child(5) { animation-delay: 0.18s; }
+			.category:nth-child(6) { animation-delay: 0.22s; }
+			.category:nth-child(7) { animation-delay: 0.26s; }
+			.category:nth-child(8) { animation-delay: 0.3s; }
+			.category:nth-child(9) { animation-delay: 0.34s; }
+			.category:nth-child(10) { animation-delay: 0.38s; }
+			.category:nth-child(11) { animation-delay: 0.42s; }
+			.category:nth-child(12) { animation-delay: 0.46s; }
+			.category:nth-child(13) { animation-delay: 0.5s; }
+
+			@keyframes card-in {
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@media (max-width: 700px) {
+				.layout {
+					width: min(1140px, calc(100% - 1.4rem));
+					padding-top: 1.2rem;
+				}
+
+				.hero-inner {
+					padding: 1.8rem 1.2rem;
+				}
+
+				.stats {
+					gap: 0.5rem;
+				}
+
+				.stat {
+					font-size: 0.8rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grain" aria-hidden="true"></div>
+
+		<main class="layout">
+			<section class="hero">
+				<div class="hero-inner">
+					<div class="eyebrow">Creative Collection 2026</div>
+					<h1>Explore Your Landing Page Models in One Elegant Hub</h1>
+					<p>
+						This introduction page organizes your entire template set by category, with direct links to every model folder so you can preview, compare, and choose quickly.
+					</p>
+					<div class="stats">
+						<div class="stat"><strong>13</strong> Categories</div>
+						<div class="stat"><strong>24</strong> Models</div>
+						<div class="stat"><strong>1</strong> Clean Entry Point</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="grid" aria-label="Landing page categories and models">
+				<article class="category">
+					<h2>Beauty</h2>
+					<small>1 model</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/beauty/beauty-salon-1/index.html">Beauty Salon 1 <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Cars</h2>
+					<small>1 model</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/cars/cars/index.html">Cars <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Civil Construction</h2>
+					<small>1 model</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/civil-construction/civil-reform/index.html">Civil Reform <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Ecommerce</h2>
+					<small>1 model</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/ecommerce/rings/index.html">Rings <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Education</h2>
+					<small>1 model</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/education/online-education/index.html">Online Education <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Food</h2>
+					<small>4 models</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/food/burger/index.html">Burger <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/food/coffeshop/index.html">Coffeshop <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/food/restaurant-1/index.html">Restaurant 1 <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/food/restaurant-2/index.html">Restaurant 2 <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Healthcare</h2>
+					<small>1 model</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/healthcare/gym/index.html">Gym <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Marketing</h2>
+					<small>1 model</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/marketing/digital-agency/index.html">Digital Agency <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Movies</h2>
+					<small>2 models</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/movies/joker/index.html">Joker <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/movies/joker-2/index.html">Joker 2 <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Pets</h2>
+					<small>3 models</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/pets/petshop-1/index.html">Petshop 1 <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/pets/petshop-2/index.html">Petshop 2 <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/pets/petshop-3/index.html">Petshop 3 <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Portfolio</h2>
+					<small>3 models</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/portfolio/web-dev-1/index.html">Web Dev 1 <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/portfolio/web-dev-2/index.html">Web Dev 2 <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/portfolio/web-dev-3/index.html">Web Dev 3 <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Travel</h2>
+					<small>3 models</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/travel/travel-1/index.html">Travel 1 <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/travel/travel-2/index.html">Travel 2 <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/travel/travel-3/index.html">Travel 3 <span>Open</span></a></li>
+					</ul>
+				</article>
+
+				<article class="category">
+					<h2>Wedding</h2>
+					<small>2 models</small>
+					<ul>
+						<li><a class="model-link" target="_blank" href="models/wedding/wedding-1/index.html">Wedding 1 <span>Open</span></a></li>
+						<li><a class="model-link" target="_blank" href="models/wedding/wedding-2/index.html">Wedding 2 <span>Open</span></a></li>
+					</ul>
+				</article>
+			</section>
+
+			<div class="socials" aria-label="Social links">
+				<a class="social-link" href="https://linkedin.com/in/lucsantosdev/" target="_blank" aria-label="LinkedIn">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+				</a>
+				<a class="social-link" href="https://github.com/lucsantosdev" target="_blank" aria-label="GitHub">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+				</a>
+				<a class="social-link" href="mailto:lucsantosdev@gmail.com" aria-label="Email">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.9.732-1.636 1.636-1.636h.749L12 10.91l9.615-7.09h.749A1.636 1.636 0 0 1 24 5.457z"/></svg>
+				</a>
+				<a class="social-link" href="https://ko-fi.com/lucsantosdev" target="_blank" aria-label="Ko-fi">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+				</a>
+			</div>
+			<p class="footer">Hub Landing Page Model Collection made by <a href="https://linkedin.com/in/lucsantosdev/" target="_blank">@lucsantosdev</a></p>
+		</main>
+	</body>
+</html>
